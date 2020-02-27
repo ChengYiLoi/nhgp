@@ -1,0 +1,46 @@
+#sideBar {
+    background-color: gainsboro;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+    min-width: 60%;
+    #dismiss{
+        display: flex;
+        justify-content: flex-end;
+        min-height: 30px;
+        align-content: center;
+        
+        .fa-arrow-left{
+            cursor: pointer;
+            margin: 10px 20px 0px 0px;
+        }
+    }
+    li{
+        border-bottom: 2px rgb(150, 146, 146) solid;
+        a{
+            color: black !important;
+            text-decoration: none !important;
+            margin-left: 10px;
+            line-height: 50px;
+        }
+        form{
+            display: flex;
+            margin: 8px 0px;
+            input{ 
+                margin-left: 8px;
+                width: 80%;
+            }
+            button{
+                background-color: transparent;
+                border: 0px transparent none;
+                margin-left: 5px;
+            }
+            
+        }
+
+    }
+   
+}
+#sideBar.active
+{
+    margin-left: -60%;
+}

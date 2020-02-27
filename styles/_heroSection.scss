@@ -1,0 +1,58 @@
+.heroSection{
+    display: grid;
+    grid-template-columns: 0.36fr 0.5fr;
+    width: 95%;
+    margin: 2% auto 0px;
+    .slideShowSection{
+        grid-column-start: 2;
+        width: 100%;
+        justify-self: flex-end;
+        .carousel > .carousel-inner{
+            min-width: 125%;
+        }
+    }
+    .heroLinks{
+        grid-column-start: 1;
+        background-color: #5292DA;
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        h4{
+     
+            color: $navFont;
+        }
+        button{
+           
+            font-size: 16px;
+        }
+        .appointment{
+            margin: 7px auto;
+            width: 95%;
+            background-color: #7AABDA;
+            color: rgb(255, 255, 255);
+           
+            
+        }
+        .dropdown .dropdown-menu{
+            margin: 3px auto;
+            width: 95%;
+            .dropdown-item{
+                white-space: unset;
+                // &:after{
+                //     content: '';
+                //     background-color: rosybrown;
+                //     display: block;
+                //     width: 3vw;
+                //     height: 2px;
+                //     margin-top: 5px;
+                // }
+            }
+            
+        } 
+        
+    }
+
+}

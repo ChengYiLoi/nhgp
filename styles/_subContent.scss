@@ -1,0 +1,111 @@
+.subContent{
+    border-radius: 15px;
+    margin: 60px auto;
+    background-color: rgb(253, 242, 242);
+    width: 95%;
+    .generalInfo{
+        border-radius: 5px;
+        display: grid;
+        grid-template-areas: 
+        'announcement event eCards'
+        'announcement links health'
+        'announcement video video'
+        'announcement video video'
+        ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: min-content;
+        .generalBox{
+            overflow: hidden;
+            padding: 5px;
+            h4{
+                @include orangeTitle();
+               
+            }
+            ul > li {
+                margin: 5px 0px;
+                padding-left: 10px;
+                a{
+                    color: black;
+                    
+                }
+            }
+                .generalContent{
+                    width: 90%;
+                    margin: 0px auto;
+                    ol > li{
+                        list-style-type: unset;
+                    }
+                    .links{
+                        margin-top: 15px;
+                        display: flex;
+                        .linkContent{
+                            margin: 0px 1px;
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+                            img{
+                                width: 150px;
+                                height: 200px;
+                                margin: 0px auto;
+                            }
+                        }
+                    }
+                }
+        }
+  
+         
+        
+         
+    }
+}
+#announcement{
+    .generalContent{
+        margin: unset;
+    }
+    grid-area: announcement;
+}
+#events{
+    grid-area: event;
+}
+#eCards{
+    .generalContent{
+        display: flex;
+        font-size: 12px;
+        color: black;
+    }
+}
+#links{
+    grid-area: links;
+}
+#health{
+    grid-area: health;
+    .generalContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 20vh;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        grid-column-gap: 10px;
+    }
+    .box{
+        align-self: stretch;
+        padding-top: 5px;
+        border: 2px orange solid;
+        border-radius: 5px;
+        justify-self: stretch;
+        align-self: center;
+        -webkit-box-shadow: 10px 13px 15px -3px rgba(0,0,0,0.42);
+        -moz-box-shadow: 10px 13px 15px -3px rgba(0,0,0,0.42);
+        box-shadow: 10px 13px 15px -3px rgba(0,0,0,0.42);
+        a > p{
+            color: black;
+            font-size: 12px;
+        }
+    }
+}
+#video{
+    height: 50vh;
+    text-align: center;
+    grid-area: video;
+}

@@ -1,0 +1,149 @@
+@import './styles/mixin';
+@import './styles/colors';
+@import './styles/sideNav';
+@import './styles/mainContent';
+@import './styles/heroSection';
+@import './styles/subContent';
+@import './styles/partnersContent';
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-image: $orangeYellow;
+    font-family: Arial, Verdana, sans-serif;
+    overflow-x: hidden;
+    .wrapper{
+        display: flex;
+    }
+}
+li{
+    list-style-type: none;
+}
+
+
+@media screen and (max-width: 1024px){
+    .navLinks > .navLink{
+        font-size: 12px !important;
+    }
+    .heroSection{
+        grid-template-columns: unset;
+        justify-items: stretch;
+        align-items: center;
+        grid-template-areas: 
+        'visit'
+        'slider'
+        ;
+        width: 100%;
+        .slideShowSection{
+            width: 80%;
+            grid-area: slider;
+            padding: 0px 3%;
+            justify-self: start !important;
+        }
+        .heroLinks{
+            grid-template-columns: unset;
+            margin-top: 1%;
+            display: grid;
+            grid-gap: 10px;
+            background-color: unset;
+            width: 100%;
+            justify-content: center;
+            grid-template-columns: repeat(2,0.5fr);
+            h4{
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+            
+        }
+        
+    }
+    .navbar {
+        
+        .collapse > .navbar-nav{
+           display: flex;
+           flex-direction: column;
+        }
+    } 
+    .generalInfo{
+        grid-template-columns: 1fr !important;
+        grid-template-areas: 
+        'announcement'
+        'event'
+        'eCards'
+        'links'
+        'video'
+        'health'
+        !important;
+    }
+    .links{
+        justify-content: center;
+    }
+   #video{
+    height: 40vh;
+   }
+   .partnerLogos{
+       grid-template-columns: repeat(3,1fr) !important;
+       grid-template-rows: repeat(2,1fr);
+       grid-gap: 10px;
+       a > img{
+        max-height: 25vh !important;
+        max-width: 100% !important;
+       }
+       
+   }
+}
+@media screen and (max-width: 768px){
+    .mainNav{
+        display: none !important;
+    }
+    #toggleSideBar{
+        display: block;
+    }
+    #mainLogo1{
+        display: inline !important;
+    }
+    .partnerLogos{
+        grid-template-columns: repeat(2,1fr) !important;
+        grid-template-rows: repeat(3,1fr);        
+    }
+    .footerText{
+        font-size: 12px;
+    }
+    .footerImage{
+        flex-direction: row !important;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #toggleSideBar{
+        display: none;
+    }
+   
+}
+@media screen and (max-width: 425px){
+    .appointment{
+        font-size: 13px !important;
+    }
+    .heroSection > .heroLinks{
+        .appointment{
+            font-size: 12px !important;
+        }
+    }
+    .partnerLogos{
+        grid-template-columns: repeat(1,1fr) !important;
+        grid-template-rows: repeat(6,1fr);
+        a > img{
+            max-width: 90vw !important;
+        }    
+        
+    }
+    .dropdown-item{
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.8rem;
+    }
+    
+}

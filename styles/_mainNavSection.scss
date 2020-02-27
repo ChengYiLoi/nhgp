@@ -1,0 +1,83 @@
+#toggleSideBar{
+    width: 100% !important;
+    height: 8vh;
+}
+.mainNavSection{
+    text-align: center;
+    max-width: 95%;
+    margin: 0px auto;
+    #mainLogo1{
+        display: none;
+    }
+    .mainNav{
+        margin: 20px auto 0px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        #mainLogo2{
+            height: 15vh;
+        }
+        .navLinks{
+            display: flex;
+            justify-content: space-evenly;
+            border-radius: 5px;
+            width: 100%;
+            align-items: center;
+            .contactDropMenu{
+                position: absolute;
+                width: 16vw;
+                left: 37%;
+                top: 16%;
+                margin-top: 1.8%;
+                z-index: 1;
+                background-color: gainsboro;
+                
+                border-radius: 10px;
+                
+                a{
+                    font-size: 12px;
+                    color: black;
+                    width: 95%;
+                    margin: 0px auto;
+                }
+                &:hover{
+                    display: block;
+                    a{
+                        background-color: gainsboro;
+                        
+                    }
+                }
+            }
+            #contactDropDown{
+                &:hover ~ .contactDropMenu{
+                    display: block;
+                }
+            }
+            
+          
+            .navLink{
+                color: white;
+                font-weight: bold;
+                font-size: 15px;
+                width: 100%;
+                text-align: center;
+                padding: 2px;
+                text-decoration: none;
+                a{
+                    &:hover ~ .dropdown-menu{
+                        display: unset;
+                    }
+                }
+                .dropdown-menu{
+                    left: 2.8vw;
+                    top: 80%;
+                    &:hover{
+                        display: unset;
+                    }
+                }
+            }
+            
+        }
+    }
+}

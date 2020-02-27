@@ -1,0 +1,26 @@
+@import './mainNavSection';
+.content{
+    width: 100%;
+    .partnersContent{
+        width: 95%;
+        margin: 0px auto;
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: 0px auto;
+        padding-top: 5%;
+        .footerText {
+            align-self: flex-end;
+            padding-bottom: 10px;
+            p{
+                margin-bottom: 0px !important;
+            }
+            .links > a{
+                border-right: 1px black solid;
+                padding-right: 5px;
+            }
+        } 
+    }
+}
